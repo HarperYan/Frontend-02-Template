@@ -104,3 +104,35 @@ for in
 
 
 try catch finally, try/catch中return了也会执行finally
+
+## 宏任务 微任务
+
+宏任务是给javascript引擎的任务， 微任务是promise产生的任务
+
+Javascript引擎会拆分宏任务成为几个micro task(job
+
+## 事件循环
+
+获取代码 -> 执行 -> 等待锁（事件，时间）
+
+## 声明
+
+function, function*, async funtion, async function*, var: 可以在声明之前访问到
+
+class, const, let: 声明前访问会报错
+
+## 预处理
+
+js引擎在代码执行前会对代码进行预处理操作 -> 预处理会找到所有var，把这个变量声明到函数的作用级别里， 无论在return后，catch,finally里
+
+所有声明都有预处理机制，都能把变量变成局部变量。 区别是const声明是会在声明前使用变量的时候会报错。
+
+## 作用域
+
+const作用域是所在的花括号
+
+var作用域是整个函数体
+
+# 函数调用
+
+javascript里每一个函数都会生成一个闭包
